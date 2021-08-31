@@ -16,6 +16,7 @@ From: nvcr.io/nvidia/cuda:10.1-cudnn7-devel-ubuntu18.04
 
     python3 -m pip install --upgrade pip
     python3 -m pip install scipy
+    python3 -m pip install click
     python3 -m pip install tensorflow==2.5
     python3 -m pip install torch
     python3 -m pip install torch-scatter
