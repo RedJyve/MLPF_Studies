@@ -18,6 +18,7 @@ Make sure that you have the cuda and cudnn modules loaded on your gilberth insta
 If you get error saying the it couldn't find certain libraries when training it likely means that you don't have the correct version of the cuda and cunn modules.
 Using the sinularity you created run the pipeline.py file with the correct argument for the training you would like to perform.
 Ex: For training on delphes singularity exec python3 mlpf/pipeline.py train -c parameters/delphes-gnn-skipconn.yaml -p delphes-
+If you are using GPU's for training add CUDA_VISIBLE_DEVICES=0,1 before the singularity exec portion of the command (use =0 for 1 gpu =0, 1 for 2 gpus, etc).
 
 If you are running the training in a slurm job (which is highly encouraged) follow the above steps in the slurm job script.
 A sample slurm job script is provided in this repository
